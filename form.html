@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+
+  <!-- Bootstrap first, custom second to override bootstrap-->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/form.css" />
+
+  <!-- Links for fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-dark navbar-expand-md">
+    <div class="container-lg">
+      <a href="#" class="navbar-brand">Car Rentals</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav ml-auto">
+          <a href="index.html" class="nav-link mx-3">Home</a>
+          <a href="search.html" class="nav-link mx-3">Search</a>
+          <a href="support.html" class="nav-link mx-3">Support</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <form onsubmit="giveMSG()">
+    <div class="custom-card fieldsets">
+      <fieldset class="container-lg mt-4 mb-3">
+        <legend class="font-weight-bold mb-3">Personal Information</legend>
+
+        <div class="form-row">
+          <div class="form-group col-12 col-sm-7 col-md-6 col-lg-5">
+            <label for="full-name">Full Name</label>
+            <input required type="text" id="full-name" class="form-control" placeholder="John Doe">
+          </div>
+          <div class="form-group col-5 col-md-4 col-lg-3 col-xl-2">
+            <label for="birth">Date of birth</label>
+            <input required type="date" id="birth" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group mt-1 mb-3">
+          Gender <br>
+          <div class="form-check form-check-inline pt-1">
+            <input required class="form-check-input" type="radio" name="gender" id="male" value="male">
+            <label class="form-check-label font-weight-light" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input required class="form-check-input" type="radio" name="gender" id="female" value="female">
+            <label class="form-check-label font-weight-light" for="female">Female</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-lg-6">
+            <label for="phone">Phone Number</label>
+            <input required type="number" id="phone" class="form-control" placeholder="+96170108124">
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="email">Email address</label>
+            <input required type="email" id="email" class="form-control" placeholder="name@example.com">
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+    <div class="custom-card fieldsets">
+      <fieldset class="container-lg mt-4 mb-3">
+        <legend class="font-weight-bold mb-3 mb-3">Pick-Up/Drop-off Information</legend>
+
+        <div class="form-row">
+          <div class="form-group col-12 col-md-6">
+            <label for="pickup-loc">Pick-up Location</label>
+            <input required type="text" id="pickup-loc" class="form-control">
+          </div>
+          <div class="form-group col-12 col-md-6">
+            <label for="dropoff-loc">Drop-off Location</label>
+            <input required type="text" id="dropoff-loc" class="form-control">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-6 col-lg-3">
+            <label for="Pickup-date">Pick-up Date</label>
+            <input required type="date" id="Pickup-date" class="form-control">
+          </div>
+          <div class="form-group col-6 col-lg-3">
+            <label for="dropoff-date">Drop-off Date</label>
+            <input required type="date" id="dropoff-date" class="form-control">
+          </div>
+          <div class="form-group col-6 col-lg-3">
+            <label for="Pickup-time">Pick-up time</label>
+            <input required type="time" id="Pickup-time" class="form-control">
+          </div>
+          <div class="form-group col-6 col-lg-3">
+            <label for="dropoff-time">Drop-off time</label>
+            <input required type="time" id="dropoff-time" class="form-control">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="custom-card fieldsets">
+      <fieldset class="container-lg mt-4 mb-3 pb-3">
+        <legend class="font-weight-bold mb-3">Payment Method</legend>
+        <button id="visaRBTN" type="button" class="btn btn-outline-primary">
+          Credit/Debit Card
+        </button>
+        <button id="cashRBTN" type="button" class="btn btn-outline-info">
+          Pay On Arrival
+        </button>
+
+        <div class="visaComponents mt-3">
+          <div class="form-row">
+            <div class="form-group col-12 col-md-6 col-lg-5 col-xl-4">
+              <label for="cardholder">Cardholder Name</label>
+              <input required type="text" id="cardholder" class="form-control">
+            </div>
+            <div class="form-group col-10 col-md-4 col-lg-3 col-xl-3">
+              <label for="card-number">Card Number</label>
+              <input required type="number" id="card-number" class="form-control">
+            </div>
+            <div class="form-group col-2 col-lg-2 col-xl-1">
+              <label for="cvv">CVV</label>
+              <input required type="number" min="100" max="9999" id="cvv" class="form-control">
+            </div>
+          </div>
+
+
+          <!-- Removed unordered list -->
+          <div class="form-row">
+
+            <div class="form-group col-4 col-md-4 col-lg-2">
+              <label for="months">Expiration Date</label>
+              <select required id="months" class="custom-select">
+                <option value="" disabled selected>Month</option>
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+                <option value="apr">April</option>
+                <option value="may">May</option>
+                <option value="jun">June</option>
+                <option value="jul">July</option>
+                <option value="aug">August</option>
+                <option value="sep">September</option>
+                <option value="oct">October</option>
+                <option value="nov">November</option>
+                <option value="dec">December</option>
+              </select>
+            </div>
+            <div class="form-group col-4 col-md-3 col-lg-1">
+              <label for="years">&InvisibleComma;</label>
+              <select required id="years" class="custom-select">
+                <option value="" disabled selected>Year</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <p>By clicking 'Confirm', you agree to the Terms & Conditions</p>
+            <button type="submit" class="confirmBTN btn btn-success">Confirm</button>
+          </div>
+
+        </div>
+
+        <div class="cashComponents my-3">
+          <p>By clicking 'Confirm', you agree to the Terms & Conditions</p>
+          <button type="submit" id="subBTN" class="btn btn-success" onsubmit="Ask()">Confirm</button>
+        </div>
+      </fieldset>
+    </div>
+
+
+  </form>
+
+  <footer id="footer" class="px-3 px-lg-0">
+    <div class="container-lg">
+      <div class="links pt-5 row">
+        <a href="#">Facebook</a>
+        <a href="#" class="mx-4">Twitter</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div class="pt-4 row">
+        <p class="text-muted"> &COPY; 2020 Car Rentals. &mdash; All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/form.js"></script>
+</body>
+
+</html>

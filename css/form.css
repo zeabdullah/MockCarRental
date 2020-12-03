@@ -1,0 +1,44 @@
+
+body {
+  font-family:  -apple-system, BlinkMacSystemFont, "Inter", 'Segoe UI', "Roboto", Oxygen, Ubuntu, Arial, sans-serif;
+}
+/***** ^ Fonts I liked ^ *****/
+
+
+
+.navbar {
+  background-color: rgb(12, 109, 189);
+  min-height: 70px;
+}
+
+
+.custom-card {
+  border: 1px solid #00000000;
+  min-height: 60%;
+  background-color: #fff;
+}
+
+
+footer {
+  font-size: 14px;
+  height: 24vh;
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+}
+
+footer a {
+  color: rgb(0, 0, 0); 
+}
+footer a:hover {
+  color: rgb(7, 105, 233);
+  text-decoration: underline;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
