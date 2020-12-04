@@ -1,104 +1,97 @@
 body {
-   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", Arial, sans-serif;
 }
 
 /********** NAVBAR **********/
 .navbar {
-   background-color: transparent;
-   transition: background-color 200ms ease;
-   min-height: 70px;
+  background-color: transparent;
+  transition: background-color 200ms ease;
+  min-height: 70px;
 }
-.navbar.scrolled, .navbar.expanded {
-   background-color: rgb(12, 109, 189);
+.navbar.scrolled,
+.navbar.expanded {
+  background-color: rgb(12, 109, 189);
 }
-
 
 /********** HEADER **********/
 header {
-   background: linear-gradient(
-      rgba(0, 0, 0, 0.45), 
-      rgba(0, 0, 0, 0.45)
-    ),
-    url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpaper.imcphoto.net%2Fvehicle-wallpapers%2Fluxury-cars%2Fjaguar-xf-series%2Fjaguar-xf-on-road.jpg&f=1&nofb=1') no-repeat fixed;
-   
-   background-size: cover;
-   background-position: 35% 100%;
-   min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpaper.imcphoto.net%2Fvehicle-wallpapers%2Fluxury-cars%2Fjaguar-xf-series%2Fjaguar-xf-on-road.jpg&f=1&nofb=1")
+      no-repeat fixed;
+
+  background-size: cover;
+  background-position: 35% 100%;
+  min-height: 100vh;
 }
 header .hero-content {
-   height: 100vh;
-   color: white;
+  height: 100vh;
+  color: white;
 }
 
 button.btn {
-   font-size: 1.1em;
+  font-size: 1.1em;
 }
-
 
 /********** SECTION 2 **********/
 #section-2 {
-   min-height: 80vh;
+  min-height: 80vh;
 }
 
 .fa-check {
-   font-size: .8em;
-   color: rgb(12, 109, 189);
+  font-size: 0.8em;
+  color: rgb(12, 109, 189);
 }
 h3 {
-   font-size: 2.25em;
-   text-align: center;
-   font-weight: 400;
+  font-size: 2.25em;
+  text-align: center;
+  font-weight: 400;
 }
 
-.text-icon-card {   
-   max-width: 32rem;
+.text-icon-card {
+  max-width: 32rem;
 }
 
 .text-icon-card p {
-   line-height: 1.9em;
+  line-height: 1.9em;
 }
 h4 {
-   font-weight: 300;
-   font-size: 1.95em;
-   letter-spacing: -0.2px;
+  font-weight: 300;
+  font-size: 1.95em;
+  letter-spacing: -0.2px;
 }
 
 .ico {
-   color: rgb(12, 109, 189);
-   margin: 0.4em;
+  color: rgb(12, 109, 189);
+  margin: 0.4em;
 
-   font-size: 3.5em;
+  font-size: 3.5em;
 }
-
 
 /********** FOOTER **********/
 footer {
-   font-size: 14px;
-   height: 24vh;
-   width: 100%;
-   background-color: rgb(245, 245, 245);
+  font-size: 14px;
+  height: 24vh;
+  width: 100%;
+  background-color: rgb(235, 235, 235);
 }
 
 footer a {
-   color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
 }
 footer a:hover {
-   color: rgb(7, 105, 233);
-   text-decoration: underline;
+  color: rgb(7, 105, 233);
+  text-decoration: underline;
 }
 
-
-
-
 /********** MEDIA & ANIMATION QUERIES **********/
-@media (min-width:992px) {
-   button.btn {
-      font-size: 1.35em;
-   }   
-   h3 {
-      font-size: 2.8em;
-   }
-   .ico {
-      font-size: 3em;   
-   }
+@media (min-width: 992px) {
+  button.btn {
+    font-size: 1.35em;
+  }
+  h3 {
+    font-size: 2.8em;
+  }
+  .ico {
+    font-size: 3em;
+  }
 }

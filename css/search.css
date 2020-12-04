@@ -1,5 +1,5 @@
 body {
-   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", Arial, sans-serif;
 }
 
 /********** NAVBAR styling **********/
@@ -9,29 +9,29 @@ body {
 }
 
 .custom-select {
-   width: 14rem;
+  width: 14rem;
 }
 
 /********** card styling **********/
 
 .card-img-top {
-   height: 30vh;
-   width: 100%; 
-   object-fit: cover;
+  height: 30vh;
+  width: 100%;
+  object-fit: cover;
 }
 
 /********** Footer **********/
 footer {
-   font-size: 14px;
-   height: 24vh;
-   width: 100%;
-   background-color: rgb(245, 245, 245);
+  font-size: 14px;
+  height: 24vh;
+  width: 100%;
+  background-color: rgb(235, 235, 235);
 }
 
 footer a {
-   color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
 }
 footer a:hover {
-   color: rgb(7, 105, 233);
-   text-decoration: underline;
+  color: rgb(7, 105, 233);
+  text-decoration: underline;
 }

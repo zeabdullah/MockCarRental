@@ -65,7 +65,7 @@
         <div class="form-row">
           <div class="form-group col-lg-6">
             <label for="phone">Phone Number</label>
-            <input required type="number" id="phone" class="form-control" placeholder="+96170108124">
+            <input required type="number" id="phone" maxlength="26" class="form-control" placeholder="+96170108124">
           </div>
           <div class="form-group col-lg-6">
             <label for="email">Email address</label>
@@ -129,11 +129,12 @@
             </div>
             <div class="form-group col-10 col-md-4 col-lg-3 col-xl-3">
               <label for="card-number">Card Number</label>
-              <input required type="number" id="card-number" class="form-control">
+              <input required type="tel" minlength="16" maxlength="16" id="card-number"
+                placeholder="3211 4444 4444 4444" class="form-control">
             </div>
             <div class="form-group col-2 col-lg-2 col-xl-1">
               <label for="cvv">CVV</label>
-              <input required type="number" min="100" max="9999" id="cvv" class="form-control">
+              <input required type="tel" minlength="1" maxlength="4" id="cvv" class="form-control">
             </div>
           </div>
 
