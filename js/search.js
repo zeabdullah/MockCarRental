@@ -1,18 +1,18 @@
 //creating an array to insert cars images and info
 var carList = [
   {
-    image:'img/image6.jpg',
-    brand:"BMW 320i",
+    image: "img/image6.jpg",
+    brand: "BMW 320i",
     model: 2008,
     type: "sport-car",
     rentperday: 50,
     description: "Sports Car",
-    rentpermonth: 1400, 
+    rentpermonth: 1400,
   },
 
   {
-    image:'img/image2.jpg',
-    brand:"Mercedes Benz",
+    image: "img/image2.jpg",
+    brand: "Mercedes Benz",
     model: 2012,
     type: "sport-car",
     rentperday: 75,
@@ -21,40 +21,39 @@ var carList = [
   },
 
   {
-    image:'img/image3.jpg',
-    brand:"Nissan Micra",
-    model:2018,
+    image: "img/image3.jpg",
+    brand: "Nissan Micra",
+    model: 2018,
     type: "sport-car",
     rentperday: 45,
     description: "Sports Car",
     rentpermonth: 1200,
   },
-    
+
   {
-    image:'img/image4.jpg',
-    brand:"Honda Civic",
+    image: "img/image4.jpg",
+    brand: "Honda Civic",
     model: 2017,
     type: "family-car",
     rentperday: 55,
     description: "Family Car",
     rentpermonth: 1360,
   },
-  
+
   {
-    image:'img/image5.jpg',
-    brand:"Nissan Sunny",
+    image: "img/image5.jpg",
+    brand: "Nissan Sunny",
     model: 2016,
     type: "family-car",
     rentperday: 40,
     description: "Family Car",
-    rentpermonth: 1150,   
+    rentpermonth: 1150,
   },
-  ];
-
+];
 
 //Code that adds the cars in the above array to the card-collection
-var $cardCollection = $('.card-collection');
-carList.forEach(function(car) {
+var $cardCollection = $(".card-collection");
+carList.forEach(function (car) {
   $cardCollection.append(`
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card my-2 ${car.type}">
@@ -68,21 +67,19 @@ carList.forEach(function(car) {
       </div>
     </div>
   </div>
-  `)
+  `);
 });
 
-
 var carFilter = document.querySelector("#filter"); //had to use none jQuery selector for...
-$('#filter').on('click', function(e){
+$("#filter").on("click", function (e) {
   var carType = carFilter.options[carFilter.selectedIndex].value; // ...this
 
   // We had to access the parent elements since if we didn't we'll be left with an empty card taking space in the page.
-  if (carType === 'family') {
-    $('.card').parent().hide(); 
-    $('.family-car').parent().show();
-  }else if(carType === 'sport') {
-    $('.card').parent().hide();
-    $('.sport-car').parent().show();
-  } else
-    $('.card').parent().show();
+  if (carType === "family") {
+    $(".card").parent().hide();
+    $(".family-car").parent().show();
+  } else if (carType === "sport") {
+    $(".card").parent().hide();
+    $(".sport-car").parent().show();
+  } else $(".card").parent().show();
 });
