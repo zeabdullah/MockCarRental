@@ -1,5 +1,6 @@
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Oxygen,
+    Ubuntu, Arial, sans-serif;
 }
 
 /********** NAVBAR **********/
@@ -50,7 +51,6 @@ h3 {
 .text-icon-card {
   max-width: 32rem;
 }
-
 .text-icon-card p {
   line-height: 1.9em;
 }

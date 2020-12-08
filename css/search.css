@@ -1,5 +1,6 @@
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Oxygen,
+    Ubuntu, Arial, sans-serif;
 }
 
 /********** NAVBAR styling **********/
@@ -13,7 +14,6 @@ body {
 }
 
 /********** card styling **********/
-
 .card-img-top {
   height: 30vh;
   width: 100%;
@@ -27,7 +27,6 @@ footer {
   width: 100%;
   background-color: rgb(235, 235, 235);
 }
-
 footer a {
   color: rgb(0, 0, 0);
 }

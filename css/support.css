@@ -1,5 +1,11 @@
 body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Oxygen,
+    Ubuntu, Arial, sans-serif;
+}
+
+.alert-container {
+  font-size: .9em;
+  font-family: "Segoe UI", "Roboto", Arial, sans-serif;
 }
 
 .navbar {
@@ -20,11 +26,9 @@ footer {
   width: 100%;
   background-color: rgb(235, 235, 235);
 }
-
 footer a {
   color: rgb(0, 0, 0);
 }
-
 footer a:hover {
   color: rgb(7, 105, 233);
   text-decoration: underline;
