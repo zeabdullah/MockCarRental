@@ -7,14 +7,17 @@ $visaComponents.hide();
 $cashComponents.hide();
 $alertContainer.hide();
 
-$("#visaRBTN").click(() => {
+
+//IMP NOTE: ES6 arrow functions make most things in jQuery to not work properly.
+
+$("#visaRBTN").click(function() { 
   $("#cashRBTN").removeClass('active');
   $(this).addClass('active'); //Act as radio buttons
   $cashComponents.hide();
   $visaComponents.slideDown('slow');
 });
 
-$("#cashRBTN").click(() => {
+$("#cashRBTN").click(function() {
   $("#visaRBTN").removeClass('active');
   $(this).addClass('active'); //Act as radio buttons
   $visaComponents.hide();
@@ -22,7 +25,7 @@ $("#cashRBTN").click(() => {
 });
 
 
-$form.submit(e => {
+$form.submit(function(e) {
   e.preventDefault();
 
   $alertContainer
@@ -31,7 +34,7 @@ $form.submit(e => {
       <span class="sr-only">Loading...</span>
     </div>`);
 
-  setTimeout(() => {
+  setTimeout(function() {
     $('.spinner-border').remove();
     $alertContainer.show();
   }, 2500);

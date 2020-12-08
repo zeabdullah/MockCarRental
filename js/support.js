@@ -3,7 +3,9 @@ const $form = $('form');
 
 $alertContainer.hide();
 
-$form.submit(e => {
+//IMP NOTE: ES6 arrow functions make most things in jQuery to not work properly.
+
+$form.submit(function(e) {
   e.preventDefault();
 
   $alertContainer
@@ -12,7 +14,7 @@ $form.submit(e => {
       <span class="sr-only">Loading...</span>
     </div>`);
 
-  setTimeout(() => {
+  setTimeout(function() {
     $('.spinner-border').remove();
     $alertContainer.show();
   }, 2500);
