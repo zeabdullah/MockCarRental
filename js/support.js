@@ -1,3 +1,3 @@
-function alertMSG() {
+let alertMSG = () => {
   alert("Thank you for your Support!");
 }

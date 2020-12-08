@@ -1,5 +1,5 @@
 //creating an array to insert cars images and info
-var carList = [
+const carList = [
   {
     image: "img/image6.jpg",
     brand: "BMW 320i",
@@ -52,8 +52,8 @@ var carList = [
 ];
 
 //Code that adds the cars in the above array to the card-collection
-var $cardCollection = $(".card-collection");
-carList.forEach(function (car) {
+const $cardCollection = $(".card-collection");
+carList.forEach( car => {
   $cardCollection.append(`
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card my-2 ${car.type}">
@@ -63,16 +63,18 @@ carList.forEach(function (car) {
         <p class="card-text text-muted font-weight-light">${car.description}</p>
         <p class="car-text">Rent cost per day: $${car.rentperday}</p>
         <p class="car-text">Rent cost per month: $${car.rentpermonth}</p>
-        <a href="form.html" class="btn btn-outline-primary">Reserve</a>
+        <a href="#" class="btn btn-outline-primary btn-reserve">Reserve</a>
       </div>
     </div>
   </div>
   `);
 });
 
-var carFilter = document.querySelector("#filter"); //had to use none jQuery selector for...
-$("#filter").on("click", function (e) {
-  var carType = carFilter.options[carFilter.selectedIndex].value; // ...this
+// const $reserveButtons = $('.btn-reserve'); // will use later
+
+const carFilter = document.querySelector("#filter"); //had to use none jQuery selector for...
+$("#filter").click(() => {
+  let carType = carFilter.options[carFilter.selectedIndex].value; // ...this
 
   // We had to access the parent elements since if we didn't we'll be left with an empty card taking space in the page.
   if (carType === "family") {

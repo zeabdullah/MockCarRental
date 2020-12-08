@@ -17,10 +17,12 @@ $("#cashRBTN").on("click", function() {
   $(".cashComponents").slideDown();
 });
 
-function Ask() {
+let Ask = () => {
   alert("Submitted!\nYou will receive an email when request is approved");
 }
 
-function giveMSG() {
+let giveMSG = () => {
   alert("Car Reserved!");
 }
+
+//TODO: replace these alerts with bootstrap's alerts
