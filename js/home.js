@@ -14,12 +14,12 @@ $(".navbar-toggler").click(() => {
 });
 
 //Smooth scroll for anchors linking to elements within the same page
-$('a[href^="#"]').click(e => {
+$('a[href^="#"]').click(function(e) { 
   e.preventDefault();
 
   $root.animate(
     {
-      scrollTop: $($.attr(this, "href")).offset().top,
+      scrollTop: $($.attr(this, "href")).offset().top, // doesn't work with arrow functions 
     },
     500
   );
