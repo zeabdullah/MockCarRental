@@ -83,5 +83,6 @@ $("#filter").click(() => {
   } else if (carType === "sport") {
     $(".card").parent().hide();
     $(".sport-car").parent().show();
-  } else $(".card").parent().show();
+  } else 
+    $(".card").parent().show();
 });
