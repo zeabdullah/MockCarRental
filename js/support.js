@@ -16,4 +16,4 @@ $form.submit(e => {
     $('.spinner-border').remove();
     $alertContainer.show();
   }, 2500);
-})
+});
