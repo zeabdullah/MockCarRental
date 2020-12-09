@@ -53,7 +53,7 @@ const carList = [
 
 //Code that adds the cars in the above array to the card-collection
 const $cardCollection = $(".card-collection");
-carList.forEach( car => {
+carList.forEach(car => {
   $cardCollection.append(`
   <div class="col-12 col-md-6 col-lg-4">
     <div class="card my-2 ${car.type}">
@@ -72,11 +72,11 @@ carList.forEach( car => {
 
 // const $reserveButtons = $('.btn-reserve'); // will use later
 
-const carFilter = document.querySelector("#filter"); //had to use none jQuery selector for...
+const $carFilter = $("#filter"); //had to use none jQuery selector for...
 $("#filter").click(() => {
-  let carType = carFilter.options[carFilter.selectedIndex].value; // ...this
+  let carType = $carFilter[0].options[$carFilter[0].selectedIndex].value; // Use index to be able to use vanilla JS DOM functions
 
-  // We had to access the parent elements since if we didn't we'll be left with an empty card taking space in the page.
+  // We have to access the parent elements since if we didn't we'll be left with an empty card taking space in the page.
   if (carType === "family") {
     $(".card").parent().hide();
     $(".family-car").parent().show();

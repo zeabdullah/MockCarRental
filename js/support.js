@@ -17,5 +17,6 @@ $form.submit(function(e) {
   setTimeout(function() {
     $('.spinner-border').remove();
     $alertContainer.show();
+    $alertContainer[0].scrollIntoView(); // Use index to be able to use vanilla JS DOM functions
   }, 2500);
 });
