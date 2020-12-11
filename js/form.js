@@ -37,6 +37,6 @@ $form.submit(function(e) {
   setTimeout(function() {
     $('.spinner-border').remove();
     $alertContainer.show();
-    $alertContainer[0].show();
+    $alertContainer[0].scrollIntoView();
   }, 2500);
 })
