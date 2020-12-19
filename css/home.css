@@ -29,6 +29,13 @@ header .hero-content {
   color: white;
 }
 
+.display-3 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 1.65rem;
+}
+
 button.btn {
   font-size: 1.1em;
 }
@@ -85,9 +92,18 @@ footer a:hover {
 
 /********** MEDIA & ANIMATION QUERIES **********/
 @media (min-width: 992px) {
+  /********** HEADER **********/
+  .display-3 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
   button.btn {
     font-size: 1.35em;
   }
+
+  /********** SECTION 2 **********/
   h3 {
     font-size: 2.8em;
   }
