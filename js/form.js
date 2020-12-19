@@ -2,6 +2,9 @@ const $alertContainer = $('.alert-container');
 const $form = $('form');
 const $visaComponents = $(".visaComponents");
 const $cashComponents = $(".cashComponents");
+const $carModel = $('.car-model');
+const $carDRent = $('.day-rent');
+const $carMRent = $('.month-rent');
 
 $visaComponents.hide();
 $cashComponents.hide();
@@ -10,9 +13,21 @@ $alertContainer.hide();
 
 //IMP NOTE: ES6 arrow functions make most things in jQuery to not work properly.
 
-$('.car-model')[0].innerText += ` ${sessionStorage.getItem('carTitle')}`;
-$('.day-rent')[0].innerText += sessionStorage.getItem('carDRent');
-$('.month-rent')[0].innerText += sessionStorage.getItem('carMRent');
+$carModel[0].innerText += ` ${sessionStorage.getItem('carTitle')}`;
+$carDRent[0].innerText += sessionStorage.getItem('carDRent');
+$carMRent[0].innerText += sessionStorage.getItem('carMRent');
+
+if(sessionStorage.getItem('carTitle') === null) {
+  $('form').remove();
+
+  $('footer').before(`
+  <div class="jumbotron bg-danger text-white">
+    <div class="container">
+      <h1 class="display-4">No Car Ordered</h1>
+      <p class="lead">Please reserve a car to be able to view this page</p>
+    </div>
+  </div>`);
+}
 
 $("#visaRBTN").click(function() { 
   $("#cashRBTN").removeClass('active');
