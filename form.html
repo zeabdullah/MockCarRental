@@ -35,6 +35,17 @@
   </nav>
 
   <form>
+    <div class="container-lg mt-4">
+      <div class="alert-container">
+        <div class="alert alert-success mb-4" role="alert">
+          <h5 class="alert-heading">Order Successful!</h5>
+          <p class="mb-0">An email will be sent to you within 30 minutes with the order details. <br>
+            Thank you for choosing Car Rentals.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <fieldset class="container-lg mt-4 mb-3">
       <legend class="font-weight-bold mb-3">Order Info</legend>
       <ul>
@@ -44,38 +55,28 @@
       </ul>
 
     </fieldset>
-
     <fieldset class="container-lg mt-4 mb-3">
       <legend class="font-weight-bold mb-3">Personal Information</legend>
-
-      <div class="alert-container">
-        <div class="alert alert-success mb-4" role="alert">
-          <h5 class="alert-heading">Order Successful!</h5>
-          <p class="mb-0">An email will be sent to you within 30 minutes with the order details. <br>
-            Thank you for choosing Car Rentals.
-          </p>
-        </div>
-      </div>
 
       <div class="form-row">
         <div class="form-group col-12 col-sm-7 col-md-6 col-lg-5">
           <label for="full-name">Full Name</label>
-          <input required type="text" id="full-name" class="form-control" placeholder="John Doe">
+          <input type="text" id="full-name" class="form-control" placeholder="John Doe" required>
         </div>
         <div class="form-group col-5 col-md-4 col-lg-3 col-xl-2">
           <label for="birth">Date of birth</label>
-          <input required type="date" id="birth" class="form-control">
+          <input type="date" id="birth" class="form-control" required>
         </div>
       </div>
 
       <div class="form-group mt-1 mb-3">
         Gender <br>
         <div class="form-check form-check-inline pt-1">
-          <input required class="form-check-input" type="radio" name="gender" id="male" value="male">
+          <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
           <label class="form-check-label font-weight-light" for="male">Male</label>
         </div>
         <div class="form-check form-check-inline">
-          <input required class="form-check-input" type="radio" name="gender" id="female" value="female">
+          <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
           <label class="form-check-label font-weight-light" for="female">Female</label>
         </div>
       </div>
@@ -83,11 +84,11 @@
       <div class="form-row">
         <div class="form-group col-lg-6">
           <label for="phone">Phone Number</label>
-          <input required type="tel" id="phone" maxlength="24" class="form-control" placeholder="+96170108124">
+          <input type="tel" id="phone" maxlength="24" class="form-control" placeholder="+96170108124" required>
         </div>
         <div class="form-group col-lg-6">
           <label for="email">Email address</label>
-          <input required type="email" id="email" class="form-control" placeholder="name@example.com">
+          <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
         </div>
       </div>
     </fieldset>
@@ -98,29 +99,29 @@
       <div class="form-row">
         <div class="form-group col-12 col-md-6">
           <label for="pickup-loc">Pick-up Location</label>
-          <input required type="text" id="pickup-loc" class="form-control">
+          <input type="text" id="pickup-loc" class="form-control" required>
         </div>
         <div class="form-group col-12 col-md-6">
           <label for="dropoff-loc">Drop-off Location</label>
-          <input required type="text" id="dropoff-loc" class="form-control">
+          <input type="text" id="dropoff-loc" class="form-control" required>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-6 col-lg-3">
           <label for="Pickup-date">Pick-up Date</label>
-          <input required type="date" id="Pickup-date" class="form-control">
+          <input type="date" id="Pickup-date" class="form-control" required>
         </div>
         <div class="form-group col-6 col-lg-3">
           <label for="dropoff-date">Drop-off Date</label>
-          <input required type="date" id="dropoff-date" class="form-control">
+          <input type="date" id="dropoff-date" class="form-control" required>
         </div>
         <div class="form-group col-6 col-lg-3">
           <label for="Pickup-time">Pick-up time</label>
-          <input required type="time" id="Pickup-time" class="form-control">
+          <input type="time" id="Pickup-time" class="form-control" required>
         </div>
         <div class="form-group col-6 col-lg-3">
           <label for="dropoff-time">Drop-off time</label>
-          <input required type="time" id="dropoff-time" class="form-control">
+          <input type="time" id="dropoff-time" class="form-control" required>
         </div>
       </div>
     </fieldset>
@@ -138,23 +139,23 @@
         <div class="form-row">
           <div class="form-group col-12 col-md-6 col-lg-5 col-xl-4">
             <label for="cardholder">Cardholder Name</label>
-            <input required type="text" id="cardholder" class="form-control">
+            <input type="text" id="cardholder" class="form-control" required>
           </div>
           <div class="form-group col-10 col-md-4 col-lg-3 col-xl-3">
             <label for="card-number">Card Number</label>
-            <input required type="tel" minlength="16" maxlength="16" id="card-number" placeholder="3211 4444 4444 4444"
-              class="form-control">
+            <input type="tel" minlength="16" maxlength="16" id="card-number" placeholder="3211 4444 4444 4444"
+              class="form-control" required>
           </div>
           <div class="form-group col-2 col-lg-2 col-xl-1">
             <label for="cvv">CVV</label>
-            <input required type="tel" minlength="3" maxlength="4" id="cvv" class="form-control">
+            <input type="tel" minlength="3" maxlength="4" id="cvv" class="form-control" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group col-4 col-md-4 col-lg-2">
             <label for="months">Expiration Date</label>
-            <select required id="months" class="custom-select">
+            <select id="months" class="custom-select" required>
               <option value="" disabled selected>Month</option>
               <option value="jan">January</option>
               <option value="feb">February</option>
@@ -172,7 +173,7 @@
           </div>
           <div class="form-group col-4 col-md-3 col-lg-1">
             <label for="years">&InvisibleComma;</label>
-            <select required id="years" class="custom-select">
+            <select id="years" class="custom-select" required>
               <option value="" disabled selected>Year</option>
               <option value="2020">2020</option>
               <option value="2021">2021</option>
