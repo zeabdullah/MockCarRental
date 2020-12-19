@@ -13,12 +13,6 @@ body {
   min-height: 70px;
 }
 
-.custom-card {
-  border: 1px solid #00000000;
-  min-height: 60%;
-  background-color: #fff;
-}
-
 footer {
   font-size: 14px;
   height: 24vh;

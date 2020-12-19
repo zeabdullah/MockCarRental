@@ -13,7 +13,8 @@ $form.submit(function(e) {
     <div class="spinner-border text-primary mb-3" role="status">
       <span class="sr-only">Loading...</span>
     </div>`);
-
+  $('.spinner-border')[0].scrollIntoView();
+  
   setTimeout(function() {
     $('.spinner-border').remove();
     $alertContainer.show();
