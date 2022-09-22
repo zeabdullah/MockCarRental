@@ -1,6 +1,6 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Oxygen,
-    Ubuntu, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', Oxygen, Ubuntu,
+    Arial, sans-serif;
 }
 
 /********** NAVBAR **********/
@@ -16,12 +16,12 @@ body {
 
 /********** HEADER **********/
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-    url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpaper.imcphoto.net%2Fvehicle-wallpapers%2Fluxury-cars%2Fjaguar-xf-series%2Fjaguar-xf-on-road.jpg&f=1&nofb=1")
-      no-repeat fixed;
-
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('../img/home-bg.jpg'); /* first layer is a gradient to darken the image a bit */
   background-size: cover;
-  background-position: 35% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
   min-height: 100vh;
 }
 header .hero-content {

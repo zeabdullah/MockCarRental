@@ -1,11 +1,11 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Oxygen,
-    Ubuntu, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', Oxygen, Ubuntu,
+    Arial, sans-serif;
 }
 
 .alert-container {
-  font-size: .9em;
-  font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+  font-size: 0.9em;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
 }
 
 .navbar {
